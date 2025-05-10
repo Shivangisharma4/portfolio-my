@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';  // Existing imports
 import { FaPinterest } from 'react-icons/fa'; // Pinterest icon import
-import duolingoLogo from '../assets/duolingo.png'; // Add Duolingo logo image to your assets folder
+import duolingoLogo from '../assets/Duolingo.png'; // Add Duolingo logo image to your assets folder
 
 const Footer = () => {
   return (
