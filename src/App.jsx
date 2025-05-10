@@ -1,9 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Blogs from './components/Blogs';
 import Projects from "./components/Projects";
+import Publications from "./components/Publications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ThemeToggle from "./components/ThemeToggle";
 import { motion } from "framer-motion";
 import './index.css';
 import React from "react";
@@ -16,10 +17,11 @@ function App() {
       transition={{ duration: 0.5 }}
       className="bg-light-mode-bg text-light-text dark:bg-dark-mode-bg dark:text-dark-text scroll-smooth"
     >
-      <ThemeToggle />
       <Navbar />
       <Hero />
+      <Blogs/>
       <Projects />
+      <Publications/>
       <Contact />
       <Footer />
     </motion.div>
