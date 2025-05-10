@@ -176,9 +176,6 @@ body {
   margin-top: 0.5rem;
   font-size: 0.95rem;
 }
-
-
-
 /* Media Queries */
 @media (max-width: 768px) {
   .hero h1 {
