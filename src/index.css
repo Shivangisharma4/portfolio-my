@@ -1,0 +1,195 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Root Variables for Gradient Accent Colors */
+:root {
+  --accent-blue: #4fc3f7;
+  --accent-green: #81c784;
+  --accent-pink: #f48fb1;
+  --accent-purple: #ba68c8;
+  --black-bg: #000000;
+  --light-gray: #cccccc;
+  --white-text: #ffffff;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--black-bg);
+  color: var(--white-text);
+}
+
+/* Utilities */
+.bg-black {
+  background-color: var(--black-bg);
+}
+
+.text-white {
+  color: var(--white-text);
+}
+
+.text-gray {
+  color: var(--light-gray);
+}
+
+/* Gradient Accent Background */
+.bg-gradient-accent {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green), var(--accent-pink), var(--accent-purple));
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* Smooth animated gradient effect */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--black-bg);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .nav-link {
+  color: var(--light-gray);
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--accent-pink);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background: var(--black-bg);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--light-gray);
+  margin-top: 1rem;
+}
+
+.hero button {
+  background: var(--accent-pink);
+  padding: 0.75rem 2rem;
+  border-radius: 0.375rem;
+  color: var(--black-bg);
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 2rem;
+}
+
+.hero button:hover {
+  background: var(--accent-purple);
+}
+
+/* About Section */
+.about {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: #0a0a0a;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-blue);
+}
+
+.about p {
+  font-size: 1rem;
+  color: var(--light-gray);
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--black-bg);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--light-gray);
+}
+
+.footer a {
+  color: var(--accent-green);
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--accent-blue);
+}
+
+.project-card {
+  background-color: #121212;
+  border: 1px solid #2a2a2a;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+  border: 1px solid #8e44ad;
+  box-shadow: 0 0 20px rgba(186, 104, 200, 0.2);
+  transform: translateY(-5px);
+  background: linear-gradient(
+    135deg,
+    rgba(79, 195, 247, 0.1),
+    rgba(186, 104, 200, 0.1)
+  );
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #80d8ff;
+}
+
+.project-card p {
+  color: #bdbdbd;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+}
