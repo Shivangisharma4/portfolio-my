@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 import './index.css';
 import React from "react";
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   return (
