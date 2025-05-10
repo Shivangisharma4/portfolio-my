@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 import './index.css';
 import React from "react";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -25,7 +25,9 @@ function App() {
       <Publications/>
       <Contact />
       <Footer />
+      <Analytics/>
     </motion.div>
+    
   );
 }
 
