@@ -5,7 +5,8 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="hero py-24 px-6 flex flex-col items-center justify-center text-center bg-black text-white overflow-hidden min-h-screen"
+      className="hero pt-32 pb-24 px-6 flex flex-col items-center justify-center text-center bg-black text-white overflow-hidden min-h-screen"
+
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
