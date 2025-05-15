@@ -18,13 +18,14 @@ function App() {
       transition={{ duration: 0.5 }}
       className="bg-light-mode-bg text-light-text dark:bg-dark-mode-bg dark:text-dark-text scroll-smooth"
     >
-      <Navbar />
+      
       <Hero />
       <Blogs/>
       <Projects />
       <Publications/>
       <Contact />
       <Footer />
+      <Navbar />
       <Analytics/>
     </motion.div>
     

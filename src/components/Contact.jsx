@@ -1,29 +1,26 @@
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const Contact = () => {
-  const form = useRef();
+  const [formData, setFormData] = useState({
+    from_name: '',
+    from_email: '',
+    message: '',
+  });
 
-  const sendEmail = (e) => {
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleMailTo = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      'service_5pk5glr',
-      'template_tqvhxzg',
-      form.current,
-      'ZY3AyCvLPYo7aq0Ik'
-    )
-    .then(
-      () => {
-        alert('Message sent successfully!');
-        form.current.reset();
-      },
-      (error) => {
-        alert('Failed to send message. Please try again.');
-        console.error(error);
-      }
-    );
+    const { from_name, from_email, message } = formData;
+
+    const subject = encodeURIComponent(`Let's Connect - from ${from_name}`);
+    const body = encodeURIComponent(`Hi Shivangi,\n\n${message}\n\nFrom: ${from_name}\nEmail: ${from_email}`);
+
+    window.open(`https://outlook.live.com/mail/deeplink/compose?to=shivangi.yourgmail@gmail.com&subject=${subject}&body=${body}`, '_blank');
   };
 
   return (
@@ -43,14 +40,14 @@ const Contact = () => {
       </motion.p>
 
       <motion.form
-        ref={form}
-        onSubmit={sendEmail}
+        onSubmit={handleMailTo}
         className="w-full max-w-lg bg-white bg-opacity-5 p-6 rounded-2xl border border-white border-opacity-10 shadow-md backdrop-blur-sm space-y-4"
       >
         <input
           type="text"
           name="from_name"
-          autoComplete="name"
+          value={formData.from_name}
+          onChange={handleChange}
           placeholder="Your Name"
           className="w-full p-3 rounded-md bg-transparent border border-white border-opacity-20 focus:outline-none focus:ring-1 focus:ring-pink-400 placeholder-white placeholder-opacity-60 text-white"
           required
@@ -58,13 +55,16 @@ const Contact = () => {
         <input
           type="email"
           name="from_email"
-          autoComplete="email"
+          value={formData.from_email}
+          onChange={handleChange}
           placeholder="Your Email"
           className="w-full p-3 rounded-md bg-transparent border border-white border-opacity-20 focus:outline-none focus:ring-1 focus:ring-pink-400 placeholder-white placeholder-opacity-60 text-white"
           required
         />
         <textarea
           name="message"
+          value={formData.message}
+          onChange={handleChange}
           placeholder="Your Message"
           rows="5"
           className="w-full p-3 rounded-md bg-transparent border border-white border-opacity-20 focus:outline-none focus:ring-1 focus:ring-pink-400 placeholder-white placeholder-opacity-60 text-white"
@@ -74,7 +74,7 @@ const Contact = () => {
           type="submit"
           className="w-full py-3 px-6 rounded-md bg-pink-500 hover:bg-pink-600 transition text-white font-medium"
         >
-          Send Message
+          Send via mail
         </button>
       </motion.form>
     </motion.section>
