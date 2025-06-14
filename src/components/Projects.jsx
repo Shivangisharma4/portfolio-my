@@ -77,15 +77,14 @@ const Projects = () => (
                 href={p.links.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white bg-gradient-to-r from-slate-600 px-4 py-2 rounded-full hover:from-pink-400 hover:from-pink-400"
+                className="text-white bg-gradient-to-r from-slate-600 px-4 py-2 rounded-full hover:from-pink-400"
               >
                 Live Demo
               </a>
             )}
           </motion.div>
         </motion.div>
-      ))}
-    </div>
+      ))}    </div>
   </motion.section>
 );
 
