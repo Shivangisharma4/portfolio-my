@@ -13,28 +13,36 @@ const Publications = () => {
     >
       <h2 className="text-4xl font-bold text-white mb-10">Publications</h2>
 
-      <div className="flex flex-col gap-5 items-center w-full max-w-screen-xl">
-        {/* Regular paragraph with space between 'Writers Pocket' and the rest of the text */}
-        <p className="text-white text-lg mb-8">
-          Three of my poems were selected in three different competitions by 
-          <a href="https://writerspocket.com/" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-500 mx-2">
-            Writers Pocket
-          </a>
-          and got published in three different book collections. Check out the publications below :D
-        </p>
+      <p className="text-neutral-300 text-lg text-center mb-8 max-w-2xl">
+        Three of my poems were selected in three different competitions by 
+        <a
+          href="https://writerspocket.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-400 hover:text-pink-500 underline mx-1"
+        >
+          Writers Pocket
+        </a>
+        and got published in three different book collections. Check out the publications below :D
+      </p>
 
+      <div className="flex flex-col gap-6 w-full max-w-3xl">
         {publications.map((publication, index) => (
           <motion.a
             key={index}
             href={publication.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white rounded-xl py-5 px-6 border border-white hover:border-pink-500 hover:text-pink-400 transition-all duration-300 w-full md:w-2/3"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            style={{ fontSize: '18px' }}
+            className="block p-6 border border-neutral-700 rounded-xl hover:border-pink-400 transition-all duration-300 group"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            {publication.title}
+            <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-pink-400 transition">
+              {publication.title}
+            </h3>
+            {publication.description && (
+              <p className="text-neutral-400 text-sm">{publication.description}</p>
+            )}
           </motion.a>
         ))}
       </div>

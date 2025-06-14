@@ -8,7 +8,7 @@
   --accent-green: #81c784;
   --accent-pink: #f48fb1;
   --accent-purple: #ba68c8;
-  --black-bg: #000000;
+  --black-bg: #212121;
   --light-gray: #cccccc;
   --white-text: #ffffff;
 }
@@ -16,17 +16,17 @@
 /* Global Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: var(--black-bg);
-  color: var(--white-text);
+  background-color: #212121;
+  color: #bdbdbd;
 }
 
 /* Utilities */
 .bg-black {
-  background-color: var(--black-bg);
+  background-color: #212121;
 }
 
 .text-white {
-  color: var(--white-text);
+  color: #bdbdbd;
 }
 
 .text-gray {
@@ -49,7 +49,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: var(--black-bg);
+  background-color: #2a2a2a;
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;

@@ -31,7 +31,7 @@ const Contact = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <motion.h2 className="text-3xl font-semibold text-pink-400 mb-6">
+      <motion.h2 className="text-3xl font-semibold text-gray-400 mb-6">
         Contact Me
       </motion.h2>
 
@@ -72,7 +72,7 @@ const Contact = () => {
         ></textarea>
         <button
           type="submit"
-          className="w-full py-3 px-6 rounded-md bg-pink-500 hover:bg-pink-600 transition text-white font-medium"
+          className="w-full py-3 px-6 rounded-md bg-slate-400 hover:bg-pink-500 transition text-gray-700 font-medium"
         >
           Send via mail
         </button>
