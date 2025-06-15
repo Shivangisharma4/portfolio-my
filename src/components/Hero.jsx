@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import profileImg from '../assets/profile.jpeg';
+import { Typewriter } from 'react-simple-typewriter';
+import backgroundImage from '../assets/gradient.gif'
+
 
 const Hero = () => {
   return (
@@ -12,26 +15,51 @@ const Hero = () => {
     >
       <div className="w-full max-w-4xl mx-auto px-4">
 
-        {/* Intro */}
-        <motion.div
-          className="flex flex-col items-center gap-4 mb-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Hi, I’m Shivangi
-            </h1>
-            <img
-              src={profileImg}
-              alt="Shivangi"
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-pink-500 shadow-md"
-            />
-          </div>
-        </motion.div>
+<motion.div
+  className="flex flex-col items-center gap-4 mb-4"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.3, duration: 0.8 }}
+>
+  <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
+      Hi, I’m Shivangi
+    </h1>
+    <img
+      src={profileImg}
+      alt="Shivangi"
+      className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-pink-500 shadow-md"
+    />
+  </div>
 
-        {/* About */}
+  {<motion.div
+  style={{
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: '150%',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    borderRadius: '2rem',
+    padding: '2rem',
+    borderWidth: '2px',
+    borderColor: '#2a2a2a'
+  }}
+  className="mt-4 mb-16 px-10 py-10 w-full sm:w-[600px] h-[200px] shadow-2xl text-white text-xl sm:text-2xl font-semibold flex items-center justify-center text-center"
+  initial={{ scale: 0.8, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ delay: 0.6, duration: 0.6 }}
+>
+    <Typewriter
+       words={["CS undergrad", "developer", "blogger", "shitposter", "reader"]}
+       loop={0}
+       cursor
+       cursorStyle="_"
+       typeSpeed={70}
+       deleteSpeed={50}
+       delaySpeed={1000}
+      />
+  </motion.div>
+  }
+      </motion.div>
         <motion.p
           className="text-base sm:text-lg leading-relaxed text-white px-2 sm:px-0 mt-4"
           initial={{ opacity: 0, y: 30 }}
@@ -39,10 +67,6 @@ const Hero = () => {
           transition={{ delay: 0.6, duration: 1 }}
           dangerouslySetInnerHTML={{
             __html: `I’m someone who enjoys making beautiful, meaningful and fun things—whether it’s through code or words.<br />
-              I love building creative digital experiences, working on side projects that reflect curiosity, and writing blogs on topics that fascinate me.<br />
-              I’m learning constantly, exploring what clicks, and chasing ideas that feel like mine.<br />
-              I have a major interest in reading philosophy, psychology, and historical fiction with some novels thrown in.<br />
-              I am also a sucker for being a polyglot before I die.<br />
               I take parts of my life as a game where every skill I learn makes me a better player.`
           }}
         />
