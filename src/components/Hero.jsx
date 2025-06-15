@@ -59,6 +59,7 @@ const Hero = () => {
       />
   </motion.div>
   }
+    //about 
       </motion.div>
         <motion.p
           className="text-base sm:text-lg leading-relaxed text-white px-2 sm:px-0 mt-4"
@@ -71,7 +72,7 @@ const Hero = () => {
           }}
         />
 
-        {/* Tech Stack */}
+        //teck stack 
         <motion.div
           className="mt-20 text-left"
           initial={{ opacity: 0 }}

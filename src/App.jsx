@@ -1,5 +1,6 @@
 // src/App.js
 import React, { useState } from "react";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Blogs from "./components/Blogs";
@@ -44,7 +45,9 @@ function App() {
         return <Hero />;
     }
   };
-  
+  useEffect(() => {
+    document.title = "Shivangi Sharma";
+  }, []);
   return (
     <motion.div
       initial={{ opacity: 0 }}
