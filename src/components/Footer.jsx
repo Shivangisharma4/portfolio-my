@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaPinterest } from 'react-icons/fa';
-import duolingoLogo from '../assets/Duolingo.png';
+import duolingoLogo from '../assets/duolingo.svg';
 
 const Footer = () => {
   return (
