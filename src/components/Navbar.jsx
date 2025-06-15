@@ -52,7 +52,7 @@ const Navbar = ({ activeTab, onTabChange }) => {
 
       {/* Desktop Scrollable Menu */}
       <div className="hidden md:block overflow-x-auto">
-        <ul className="flex gap-6 px-6 py-4 text-white font-medium whitespace-nowrap min-w-max">
+      <ul className="flex justify-center gap-6 px-6 py-4 text-white font-medium whitespace-nowrap">
           {TABS.map(({ label, value }) => (
             <motion.li
               key={value}
