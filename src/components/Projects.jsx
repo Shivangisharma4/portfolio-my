@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "AlgoPlay",
+    description:
+      "a sorting algorithm visualizer that helps users to understand and visualize various sorting algorithms in action.)",
+    links: { repo:"https://github.com/Shivangisharma4/Algoplay", demo:"https://www.algoplay.live/"  },
+  },
+  {
     title: "Kathana AI",
     description:
       "A writer‑focused AI system for generating, editing and keeping stories consistent. Built with Python and React. (work in progress)",
