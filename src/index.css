@@ -1,0 +1,243 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* ─── Base ─── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans;
+  }
+
+  ::selection {
+    background: rgba(212, 165, 116, 0.25);
+    color: #F2E8DC;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif text-navy;
+  }
+
+  p {
+    @apply leading-relaxed text-ink-light;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+}
+
+/* ─── Components ─── */
+@layer components {
+
+  /* Section spacing */
+  .section {
+    @apply px-6 md:px-12 lg:px-20 py-20 md:py-28 max-w-6xl mx-auto;
+  }
+
+  /* Handwritten accent label */
+  .accent-label {
+    @apply font-handwritten text-accent text-xl md:text-2xl;
+  }
+
+  /* Subtle divider */
+  .editorial-divider {
+    @apply w-16 h-[1px] bg-ink-faint/30 my-8;
+  }
+
+  /* Tag pill */
+  .tag {
+    @apply inline-block px-3 py-1 text-xs font-sans font-medium tracking-wide
+           border border-ink-faint/20 rounded-full text-ink-faint
+           hover:border-accent/50 hover:text-accent transition-all duration-300;
+  }
+
+  /* Project card */
+  .project-card {
+    @apply relative overflow-hidden rounded-2xl bg-paper
+           border border-cream-dark/80 shadow-sm
+           hover:shadow-lg hover:border-accent/30
+           transition-all duration-500 ease-out;
+  }
+
+  .project-card img {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .project-card:hover img {
+    transform: scale(1.03);
+  }
+
+  /* Chit chat card */
+  .chitchat-card {
+    @apply rounded-xl bg-paper border border-cream-dark/70
+           transition-all duration-300 overflow-hidden;
+  }
+
+  .chitchat-card:hover {
+    @apply border-accent/30 shadow-md;
+  }
+}
+
+/* ─── Utilities ─── */
+@layer utilities {
+
+  /* Grid background on dark brown */
+  .dot-grid::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(212, 165, 116, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212, 165, 116, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Doodle decorations */
+  .doodle-circle {
+    position: relative;
+  }
+  .doodle-circle::after {
+    content: '';
+    position: absolute;
+    top: -12px; right: -16px;
+    width: 40px; height: 40px;
+    border: 2px solid rgba(212, 165, 116, 0.2);
+    border-radius: 50%;
+    transform: rotate(-10deg);
+    pointer-events: none;
+  }
+
+  .doodle-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .doodle-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 8 Q 40 2, 80 7 T 160 6 T 198 8' fill='none' stroke='%23C17F4E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+    background-size: 100% 100%;
+    pointer-events: none;
+  }
+
+  .doodle-arrow {
+    position: relative;
+  }
+  .doodle-arrow::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    width: 50px;
+    height: 50px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath d='M5 40 Q 20 15, 40 10' fill='none' stroke='%23D4A574' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M35 5 L40 10 L33 13' fill='none' stroke='%23D4A574' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .doodle-star {
+    position: relative;
+  }
+  .doodle-star::after {
+    content: '✦';
+    position: absolute;
+    top: -8px;
+    right: -20px;
+    font-size: 14px;
+    color: rgba(193, 127, 78, 0.5);
+    pointer-events: none;
+  }
+
+  .doodle-squiggle::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 10'%3E%3Cpath d='M2 5 Q 10 0, 18 5 T 34 5 T 50 5 T 58 5' fill='none' stroke='%238C7E72' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+    background-size: contain;
+    pointer-events: none;
+  }
+
+  /* Botanical vine doodle */
+  .doodle-botanical {
+    position: relative;
+  }
+  .doodle-botanical::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 40px;
+    height: 80px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 80'%3E%3Cpath d='M20 80 Q20 50, 10 40 Q5 35, 12 25 Q18 18, 15 8 Q14 3, 18 0' fill='none' stroke='%23C17F4E' stroke-width='1' stroke-linecap='round'/%3E%3Cpath d='M12 25 Q8 22, 5 28' fill='none' stroke='%23D4A574' stroke-width='0.8' stroke-linecap='round'/%3E%3Cpath d='M15 40 Q20 36, 24 40' fill='none' stroke='%23D4A574' stroke-width='0.8' stroke-linecap='round'/%3E%3Cpath d='M15 55 Q10 52, 8 56' fill='none' stroke='%23D4A574' stroke-width='0.8' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  /* Coffee steam doodle */
+  .doodle-steam {
+    position: relative;
+  }
+  .doodle-steam::after {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 18 Q6 12, 4 10 Q2 8, 6 5 Q8 3, 6 0' fill='none' stroke='%238C7E72' stroke-width='1' stroke-linecap='round'/%3E%3Cpath d='M14 18 Q14 13, 12 11 Q10 9, 13 6 Q15 4, 13 1' fill='none' stroke='%238C7E72' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  /* Stagger children animation helper */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+  .stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(7) { animation-delay: 0.35s; }
+  .stagger-children > *:nth-child(8) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(9) { animation-delay: 0.45s; }
+  .stagger-children > *:nth-child(10) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(11) { animation-delay: 0.55s; }
+  .stagger-children > *:nth-child(12) { animation-delay: 0.6s; }
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 165, 116, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 165, 116, 0.4);
+}
