@@ -34,7 +34,7 @@ const About = () => {
             viewport={{ once: true }}
             custom={1}
           >
-            I'm someone who enjoys making beautiful, meaningful and fun things, whether it's through code or words. Currently a CS undergrad at RGPV University, spending my time building projects, writing, and exploring everything in between.
+            I'm someone who enjoys making beautiful, meaningful and fun things, whether it's through code or words. I build digital experiences with a focus on clean, sleek, and intentional design. I am currently open to new freelance opportunities and collaborations.
           </motion.p>
 
           <motion.p
@@ -45,7 +45,7 @@ const About = () => {
             viewport={{ once: true }}
             custom={2}
           >
-            I've built things like reading journals, algorithm visualizers, and AI-powered legal tools. I also contribute to open source projects and write about tech. When I'm not coding, you'll find me reading, writing poetry, or learning German on Duolingo.
+            When I am not working on digital projects, you will find me reading, writing poetry, or learning German on Duolingo.
           </motion.p>
 
           {/* Languages */}

@@ -1,17 +1,7 @@
 import { motion } from 'framer-motion';
-import { GithubLogo, XLogo, LinkedinLogo, PinterestLogo, EnvelopeSimple, CalendarDots } from '@phosphor-icons/react';
+import { GithubLogo, XLogo, LinkedinLogo, PinterestLogo, EnvelopeSimple, CalendarDots, Briefcase } from '@phosphor-icons/react';
 
 const Contact = () => {
-  const openCalPopup = () => {
-    if (window.Cal) {
-      window.Cal.ns.chat('openModal', {
-        calLink: 'shivangi/chat',
-      });
-    } else {
-      window.open('https://cal.com/shivangi/chat', '_blank');
-    }
-  };
-
   return (
     <section id="contact" className="section text-center">
       <motion.div
@@ -39,7 +29,9 @@ const Contact = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
           <motion.a
-            href="mailto:shivangi.yourgmail@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=shivangi.sharma7004@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full
                        border border-navy/80 text-navy font-sans font-medium text-sm tracking-wide
                        hover:bg-navy hover:text-cream transition-all duration-400"
@@ -50,8 +42,10 @@ const Contact = () => {
             Say Hello
           </motion.a>
 
-          <motion.button
-            onClick={openCalPopup}
+          <motion.a
+            href="https://cal.com/shivangi-sharma/10-min-chat"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full
                        border border-warm/60 text-warm font-sans font-medium text-sm tracking-wide
                        hover:bg-warm hover:text-cream hover:border-warm transition-all duration-400"
@@ -60,7 +54,7 @@ const Contact = () => {
           >
             <CalendarDots size={16} weight="regular" />
             Schedule a Chat
-          </motion.button>
+          </motion.a>
         </div>
 
         {/* Social row */}
@@ -70,6 +64,7 @@ const Contact = () => {
             { href: 'https://x.com/shivangitwt', label: 'Twitter', Icon: XLogo },
             { href: 'https://www.linkedin.com/in/shivangi44sharma/', label: 'LinkedIn', Icon: LinkedinLogo },
             { href: 'https://in.pinterest.com/wouffle_/', label: 'Pinterest', Icon: PinterestLogo },
+            { href: 'https://www.upwork.com/freelancers/~012f1915a3bf257f8e?mp_source=share', label: 'Upwork', Icon: Briefcase },
           ].map((s) => (
             <a
               key={s.label}

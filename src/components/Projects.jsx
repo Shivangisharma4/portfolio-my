@@ -1,68 +1,59 @@
 import { motion } from 'framer-motion';
-import lawLingoImage from '../assets/law_lingo.png';
-import pagelyImage from '../assets/pagely_mario.png';
-import mritunjayImage from '../assets/mritunjay_mario.png';
-import algoplayImage from '../assets/algoplay_mario.png';
-import stargazersImage from '../assets/stargazers_mario.png';
-import pinvibeImage from '../assets/pinvibe_mario.png';
+import stackArchitectImage from '../assets/stack_architect_mario.png';
+import focusflowImage from '../assets/focusflow_mario.png';
+import aegisAiImage from '../assets/aegis_ai_mario.png';
+import turingMachineImage from '../assets/turing_machine_mario.png';
 import kathanaImage from '../assets/kathana_mario.png';
+import lawLingoImage from '../assets/law_lingo.png';
 
 const projects = [
   {
-    title: 'Law-Lingo',
-    description: 'An AI-powered legal analysis platform that breaks down grievances and generates drafts in plain language. Built with React, Node, and Gemini.',
+    title: 'Stack Architect',
+    description: 'An algorithmic tech stack advisor that recommends the exact technologies for your project based on your constraints.',
+    href: 'https://stack-architect.vercel.app/',
+    image: stackArchitectImage,
+    tags: ['Architecture', 'Tech Stack', 'Advisor'],
+    status: 'Live',
+  },
+  {
+    title: 'FocusFlow Max',
+    description: 'A specialized study environment designed to combat under stimulation in neurodivergent users. It combines a high performance PDF reader with an integrated multi channel sensory engine like Minecraft parkour and Azure powered TTS to maintain focus during academic reading.',
+    href: 'https://focusflow-max.vercel.app/',
+    image: focusflowImage,
+    tags: ['Productivity', 'Accessibility', 'Reader'],
+    status: 'Live',
+  },
+  {
+    title: 'Aegis AI',
+    description: 'A specialized Retrieval Augmented Generation system prioritizing privacy by processing documents entirely within the browser without cloud reliance.',
+    href: '#',
+    image: aegisAiImage,
+    tags: ['AI', 'Privacy', 'RAG'],
+    status: 'Coming Soon',
+  },
+  {
+    title: 'Kathana AI',
+    description: 'Writer focused AI story generation. Helping you get past the blank page.',
+    href: '#',
+    image: kathanaImage,
+    tags: ['AI', 'Storytelling', 'In Progress'],
+    status: 'Coming Soon',
+  },
+  {
+    title: 'Law Lingo',
+    description: 'An AI powered legal analysis platform that breaks down grievances and generates drafts in plain language. Built with React, Node, and Gemini.',
     href: 'https://github.com/Shivangisharma4/Law-lingo',
     image: lawLingoImage,
     tags: ['AI', 'Legal Tech', 'Full Stack'],
     status: 'Live',
   },
   {
-    title: 'Pagely',
-    description: 'A personal reading journal. Track what you read, how it made you feel, and where it took you.',
-    href: 'https://pagely-one.vercel.app/',
-    image: pagelyImage,
-    tags: ['Reading', 'Journal', 'Productivity'],
+    title: 'Turing Machine',
+    description: 'An interactive web experience that simulates and demystifies the inner workings of a classic Turing machine.',
+    href: 'https://turing-mystery.vercel.app/',
+    image: turingMachineImage,
+    tags: ['Interactive', 'Simulation', 'Web'],
     status: 'Live',
-  },
-  {
-    title: 'Mritunjay',
-    description: 'A freelanced web project for a client, designed and delivered from scratch.',
-    href: 'https://mritunjay-eosin.vercel.app',
-    image: mritunjayImage,
-    tags: ['Freelance', 'Web Dev', 'Complete'],
-    status: 'Live',
-  },
-  {
-    title: 'AlgoPlay',
-    description: 'Sorting algorithms visualized. Watch them race, swap, and settle into order.',
-    href: 'https://www.algoplay.live/',
-    image: algoplayImage,
-    tags: ['Algorithms', 'Visualization', 'Interactive'],
-    status: 'Live',
-  },
-  {
-    title: 'Stargazers',
-    description: 'Space-themed productivity and galaxy explorer. Because why not do your tasks among the stars?',
-    href: 'https://star-gazers-neon.vercel.app/',
-    image: stargazersImage,
-    tags: ['Space', 'Productivity', 'Explorer'],
-    status: 'Live',
-  },
-  {
-    title: 'Pinvibe Quiz',
-    description: 'An interactive quiz app with a playful, fast, and slightly competitive edge.',
-    href: 'https://pinvibe-quiz.vercel.app/',
-    image: pinvibeImage,
-    tags: ['Quiz', 'Interactive', 'UI/UX'],
-    status: 'Live',
-  },
-  {
-    title: 'Kathana AI',
-    description: 'Writer-focused AI story generation. Helping you get past the blank page.',
-    href: '#',
-    image: kathanaImage,
-    tags: ['AI', 'Storytelling', 'In Progress'],
-    status: 'Coming Soon',
   },
 ];
 

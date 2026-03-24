@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { GithubLogo, XLogo, LinkedinLogo } from '@phosphor-icons/react';
+import { GithubLogo, XLogo, LinkedinLogo, Briefcase } from '@phosphor-icons/react';
 
 const Navbar = () => {
   const scrollTo = (id) => {
@@ -14,12 +14,18 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
     >
-      <button
-        onClick={() => scrollTo('#home')}
-        className="font-handwritten text-2xl text-navy hover:text-accent transition-colors"
-      >
-        Shivangi
-      </button>
+      <div className="flex items-center gap-3">
+        <button
+          onClick={() => scrollTo('#home')}
+          className="font-handwritten text-2xl text-navy hover:text-accent transition-colors"
+        >
+          Shivangi
+        </button>
+        <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#10B981]/10 border border-[#10B981]/20">
+          <div className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
+          <span className="text-[10px] font-medium tracking-widest text-[#059669] uppercase font-sans">Available</span>
+        </div>
+      </div>
 
       <div className="flex items-center gap-8">
         {[
@@ -45,6 +51,12 @@ const Navbar = () => {
           </a>
           <a href="https://www.linkedin.com/in/shivangi44sharma/" target="_blank" rel="noopener noreferrer" className="text-ink-faint hover:text-navy transition-colors" aria-label="LinkedIn">
             <LinkedinLogo size={18} weight="regular" />
+          </a>
+          <a href="https://www.upwork.com/freelancers/~012f1915a3bf257f8e?mp_source=share" target="_blank" rel="noopener noreferrer" className="relative group text-ink-faint hover:text-navy transition-colors flex items-center justify-center" aria-label="Upwork">
+            <Briefcase size={18} weight="regular" />
+            <span className="absolute pt-3 top-5 left-1/2 -translate-x-1/2 whitespace-nowrap font-handwritten text-accent text-lg md:text-xl opacity-95 rotate-[-6deg] select-none pointer-events-none transition-all group-hover:-translate-y-1 group-hover:opacity-100">
+              hire me! ↑
+            </span>
           </a>
         </div>
       </div>
