@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import stackArchitectImage from '../assets/stack_architect_mario.png';
+import reasoningPlaygroundImage from '../assets/reasoning_playground_mario.png';
 import focusflowImage from '../assets/focusflow_mario.png';
 import aegisAiImage from '../assets/aegis_ai_mario.png';
 import turingMachineImage from '../assets/turing_machine_mario.png';
@@ -13,6 +14,14 @@ const projects = [
     href: 'https://stack-architect.vercel.app/',
     image: stackArchitectImage,
     tags: ['Architecture', 'Tech Stack', 'Advisor'],
+    status: 'Live',
+  },
+  {
+    title: 'Reasoning Playground',
+    description: 'A collaborative canvas where teams co-write prompts and watch an AI agent think out loud. Presence syncs in real time, and the agent streams its extended thinking and final output side by side as it moves through tools and a vector-RAG knowledge base.',
+    href: 'https://reasoning-playground.vercel.app/',
+    image: reasoningPlaygroundImage,
+    tags: ['AI', 'Collaborative', 'Real-Time'],
     status: 'Live',
   },
   {
